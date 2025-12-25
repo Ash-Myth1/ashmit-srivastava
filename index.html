@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashmit Srivastava - Creative Developer Portfolio</title>
     
-    <!-- Favicon Link -->
     <link rel="icon" type="image/png" href="public/AS_logo.png">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- GSAP (GreenSock Animation Platform) & ScrollTrigger Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -70,7 +66,7 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 113, 227, 0.16) 0%, rgba(0, 113, 227, 0) 58%); /* Made 9% brighter */
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.16) 0%, rgba(0, 113, 227, 0) 58%);
             pointer-events: none;
             transform: translate(-50%, -50%);
             z-index: 9999;
@@ -79,10 +75,8 @@
 </head>
 <body class="antialiased">
 
-    <!-- Custom Cursor Glow -->
     <div id="cursor-glow"></div>
 
-    <!-- Header Navigation -->
     <header id="main-header" class="glass-header fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
         <nav class="max-w-6xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -97,18 +91,15 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="h-screen flex items-center justify-center text-center overflow-hidden">
             <div class="max-w-4xl mx-auto px-6">
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                     <span class="hero-text hero-line">Aspiring AI Engineer</span>
                     <span class="hero-text-highlight hero-line">Exploring Data & Code.</span>
-                    
                 </h1>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-24 md:py-32 bg-[#111]">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -130,22 +121,18 @@
             </div>
         </section>
 
-        <!-- Projects Section (Horizontal Scrolling) -->
         <section id="projects" class="relative">
-            <!-- This container is pinned while the horizontal scroll happens -->
             <div id="projects-pin-container" class="h-screen w-full">
                 <div class="max-w-6xl mx-auto px-6 h-full flex items-center">
                     <h2 id="projects-title" class="text-5xl font-bold">Selected Work</h2>
                 </div>
-                 <!-- The horizontal scrolling content is absolutely positioned to be controlled by GSAP -->
-                <div id="projects-scroller" class="absolute top-0 left-0 w-full h-full overflow-x-scroll overflow-y-hidden horizontal-scroll-wrapper">
-                    <div id="projects-wrapper" class="flex h-full items-center" style="width: 300%;"> <!-- Adjusted for 2 projects -->
+                 <div id="projects-scroller" class="absolute top-0 left-0 w-full h-full overflow-x-scroll overflow-y-hidden horizontal-scroll-wrapper">
+                    
+                    <div id="projects-wrapper" class="flex h-full items-center" style="width: 400%;">
                         
-                        <!-- Panel 1: Intro Text -->
-                        <div class="w-1/3 h-full flex-shrink-0"></div>
+                        <div class="w-1/4 h-full flex-shrink-0"></div>
 
-                        <!-- Panel 2: Project One -->
-                        <div class="project-panel w-1/3 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                        <div class="project-panel w-1/4 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
                             <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
                                     <div class="flex items-center gap-4 mb-6">
@@ -178,8 +165,7 @@
                             </div>
                         </div>
 
-                        <!-- Panel 3: Project Two -->
-                        <div class="project-panel w-1/3 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                        <div class="project-panel w-1/4 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
                                     <div class="flex items-center gap-4 mb-6">
@@ -211,8 +197,7 @@
                             </div>
                         </div>
 
-                        <!-- Panel 4: Project Three -->
-                        <div class="project-panel w-1/3 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                        <div class="project-panel w-1/4 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
                             <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
                                     <div class="mb-6 rounded-xl overflow-hidden shadow-lg border border-gray-800">
@@ -221,11 +206,11 @@
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>
-                        
+
                                     <div class="flex items-center gap-4 mb-6">
                                         <h3 class="text-3xl font-bold text-white">Kunga4Green Campaign</h3>
                                     </div>
-                        
+                                    
                                     <div class="grid md:grid-cols-2 gap-x-8">
                                         <div>
                                             <p class="text-gray-400 text-sm">
@@ -235,7 +220,7 @@
                                                 <b>Impact:</b> Played a pivotal role in the election victory by driving student engagement through a professional, mobile-first digital presence.
                                             </p>
                                         </div>
-                        
+                                        
                                         <div>
                                             <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
                                             <ul class="space-y-2 text-sm text-gray-400">
@@ -243,7 +228,7 @@
                                                 <li class="flex items-start"><span class="mr-2 text-lg">📱</span><span>Mobile-first responsive design.</span></li>
                                                 <li class="flex items-start"><span class="mr-2 text-lg">🏆</span><span>"Legacy of Victory" Bento Grid.</span></li>
                                             </ul>
-                        
+                                            
                                             <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
                                             <div class="flex flex-wrap gap-2">
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">HTML5</span>
@@ -253,7 +238,7 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+                                
                                 <div class="flex gap-6 mt-6">
                                     <a href="https://kunga4green.me" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
                                     <a href="public/Campaign_Website.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank">View Project PDF &rarr;</a>
@@ -261,7 +246,11 @@
                             </div>
                         </div>
 
-        <!-- Contact Section -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="py-24 md:py-32 bg-[#111]">
             <div class="max-w-3xl mx-auto text-center px-6">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Build Something Great</h2>

@@ -201,12 +201,20 @@
                             <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
                                     <div class="mb-6 rounded-xl overflow-hidden shadow-lg border border-gray-800">
-                                        <video controls poster="public/campaign_site.png" class="w-full aspect-video object-cover">
+                                        <video 
+                                            autoplay 
+                                            loop 
+                                            muted 
+                                            playsinline 
+                                            controls 
+                                            poster="public/campaign_site.png" 
+                                            class="w-full aspect-video object-cover"
+                                        >
                                             <source src="public/campaign_demo.mp4" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>
-
+                        
                                     <div class="flex items-center gap-4 mb-6">
                                         <h3 class="text-3xl font-bold text-white">Kunga4Green Campaign</h3>
                                     </div>

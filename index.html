@@ -17,21 +17,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <style>
-        /* Base styles inspired by Apple's aesthetic */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #000000;
             color: #f5f5f7;
         }
 
-        /* Custom class for the glassmorphism effect on the header */
         .glass-header {
             background-color: rgba(22, 22, 23, 0.8);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
         }
 
-        /* Styling for the large hero text */
         .hero-text {
             color: #6e6e73;
         }
@@ -39,7 +36,6 @@
             color: #f5f5f7;
         }
         
-        /* Custom button styling */
         .cta-button {
             background-color: #0071e3;
             color: white;
@@ -49,27 +45,27 @@
             background-color: #0077ed;
         }
 
-        /* Hide scrollbar for the horizontal scroll section */
         .horizontal-scroll-wrapper::-webkit-scrollbar {
             display: none;
         }
         .horizontal-scroll-wrapper {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
         
-        /* Mouse Glow Effect */
-        #cursor-glow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 113, 227, 0.16) 0%, rgba(0, 113, 227, 0) 58%);
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
+        @media (hover: hover) and (pointer: fine) {
+            #cursor-glow {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(0, 113, 227, 0.16) 0%, rgba(0, 113, 227, 0) 58%);
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+            }
         }
     </style>
 </head>
@@ -106,13 +102,13 @@
                     <div class="about-content">
                         <h2 class="text-4xl font-bold mb-6">A Bit About Me</h2>
                         <p class="text-lg text-gray-400 mb-4">
-                            I am a 2nd-year B.Tech student specializing in Artificial Intelligence and Data Science at NIIT University. With a strong interest in emerging technologies, I am keen on exploring innovative solutions and applying data-driven approaches to solve real-world challenges.
+                            I am a B.Tech student specializing in Artificial Intelligence and Data Science at NIIT University[cite: 1]. With a strong interest in emerging technologies, I am keen on exploring innovative solutions and applying data-driven approaches to solve real-world challenges.
                         </p>
                     </div>
                     <div class="about-image-wrapper p-8 bg-black rounded-3xl">
                         <img 
                           src="public/Ashmit.jpg" 
-                          alt="A photo of Ashmit Srivastava" 
+                          alt="Ashmit Srivastava" 
                           class="aspect-square w-full h-full object-cover rounded-2xl"
                           onerror="this.onerror=null;this.src='https://placehold.co/400x400/111111/f5f5f7?text=Image+Not+Found';"
                         >
@@ -128,11 +124,77 @@
                 </div>
                  <div id="projects-scroller" class="absolute top-0 left-0 w-full h-full overflow-x-scroll overflow-y-hidden horizontal-scroll-wrapper">
                     
-                    <div id="projects-wrapper" class="flex h-full items-center" style="width: 400%;">
+                    <div id="projects-wrapper" class="flex h-full items-center w-max">
                         
-                        <div class="w-1/4 h-full flex-shrink-0"></div>
+                        <div class="w-screen h-full flex-shrink-0"></div>
 
-                        <div class="project-panel w-1/4 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                        <!-- PROJECT 1: AIScholar -->
+                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                                <div class="flex-grow">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <div class="w-12 h-12 rounded-lg bg-blue-900 flex items-center justify-center text-2xl">🤖</div>
+                                        <h3 class="text-3xl font-bold">AIScholar</h3>
+                                    </div>
+                                    <div class="grid md:grid-cols-2 gap-x-8">
+                                        <div>
+                                            <p class="text-gray-400 text-sm">Engineered an offline, privacy-first Retrieval-Augmented Generation (RAG) research assistant deployed fully locally[cite: 1].</p>
+                                            <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Implemented history-aware retrieval and metadata-anchored citations for reliable, verifiable AI document interaction[cite: 1].</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-start"><span class="mr-2 text-lg">🔒</span><span>Privacy-first offline deployment.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">🧠</span><span>History-aware data retrieval.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">📑</span><span>Metadata-anchored citations.</span></li>
+                                            </ul>
+                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">LLMs</span>
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">RAG</span>
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Local AI</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROJECT 2: Magginos -->
+                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                                <div class="flex-grow">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <div class="w-12 h-12 rounded-lg bg-orange-900 flex items-center justify-center text-2xl">🛒</div>
+                                        <h3 class="text-3xl font-bold">Magginos</h3>
+                                    </div>
+                                    <div class="grid md:grid-cols-2 gap-x-8">
+                                        <div>
+                                            <p class="text-gray-400 text-sm">Built and actively manage a full-stack e-commerce Progressive Web App streamlining late-night hostel food deliveries, with automated Vercel deployments[cite: 1].</p>
+                                            <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Integrated predictive inventory analytics and NLP-based sentiment analysis to enhance day-to-day operations[cite: 1].</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-start"><span class="mr-2 text-lg">📈</span><span>Predictive inventory analytics.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">💬</span><span>NLP-based sentiment analysis.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">🚀</span><span>Automated Vercel deployment.</span></li>
+                                            </ul>
+                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">TypeScript</span>
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Firebase</span>
+                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Vercel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROJECT 3: EduData -->
+                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
                             <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
                                     <div class="flex items-center gap-4 mb-6">
@@ -147,8 +209,8 @@
                                         <div>
                                             <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
                                             <ul class="space-y-2 text-sm">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🗄️</span><span>Full CRUD (Create, Read, Update, Delete) functionality.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📊</span><span>Export data to CSV/Excel for portability.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">🗄️</span><span>Full CRUD functionality.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">📊</span><span>Export data to CSV/Excel.</span></li>
                                                 <li class="flex items-start"><span class="mr-2 text-lg">🎨</span><span>User-friendly interface built with Tkinter.</span></li>
                                             </ul>
                                             <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
@@ -156,7 +218,6 @@
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Tkinter</span>
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">MySQL</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Pandas</span>
                                             </div>
                                         </div>
                                     </div>
@@ -165,7 +226,8 @@
                             </div>
                         </div>
 
-                        <div class="project-panel w-1/4 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                        <!-- PROJECT 4: Shahar -->
+                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
                                     <div class="flex items-center gap-4 mb-6">
@@ -180,15 +242,13 @@
                                         <div>
                                             <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
                                             <ul class="space-y-2 text-sm">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📍</span><span>Google Maps integration for navigation.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🏰</span><span>Details on forts, museums, and heritage sites.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🏨</span><span>Listings of hotels and dining options.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">📍</span><span>Google Maps integration.</span></li>
+                                                <li class="flex items-start"><span class="mr-2 text-lg">🏰</span><span>Heritage site details.</span></li>
                                             </ul>
                                             <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
                                             <div class="flex flex-wrap gap-2">
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Google Maps API</span>
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Apps Script</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Spreadsheet</span>
                                             </div>
                                         </div>
                                     </div>
@@ -197,57 +257,40 @@
                             </div>
                         </div>
 
-                        <div class="project-panel w-1/4 h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
+                        <!-- PROJECT 5: Kunga4Green -->
+                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
                             <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
                                 <div class="flex-grow">
-                                    
                                     <div class="flex items-center gap-4 mb-6">
                                         <div class="w-12 h-12 rounded-lg bg-green-900 flex items-center justify-center text-2xl">🏆</div>
                                         <h3 class="text-3xl font-bold text-white">Kunga4Green</h3>
                                     </div>
-                                    
                                     <div class="grid md:grid-cols-2 gap-x-8">
-                                        
                                         <div class="flex flex-col gap-4">
                                             <div class="rounded-xl overflow-hidden shadow-lg border border-gray-800 w-full">
-                                                <video 
-                                                    autoplay 
-                                                    loop 
-                                                    muted 
-                                                    playsinline 
-                                                    controls 
-                                                    poster="public/campaign_site.png" 
-                                                    class="w-full aspect-video object-cover"
-                                                >
+                                                <video autoplay loop muted playsinline controls poster="public/campaign_site.png" class="w-full aspect-video object-cover">
                                                     <source src="public/campaign_demo.mp4" type="video/mp4">
                                                     Your browser does not support the video tag.
                                                 </video>
                                             </div>
-                                            
                                             <p class="text-gray-400 text-sm">
                                                 A digital election HQ for Kunga Tsepak’s Vice-Captain run, consolidating his manifesto into a bold, interactive experience.
                                             </p>
                                         </div>
-                                        
                                         <div>
                                             <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
                                             <ul class="space-y-2 text-sm text-gray-400">
                                                 <li class="flex items-start"><span class="mr-2 text-lg">⚡</span><span>GSAP animations & scroll reveals.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📱</span><span>Mobile-first responsive design.</span></li>
                                                 <li class="flex items-start"><span class="mr-2 text-lg">📈</span><span>Driving voter engagement.</span></li>
                                             </ul>
-                                            
                                             <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
                                             <div class="flex flex-wrap gap-2">
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Tailwind</span>
                                                 <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">GSAP</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">HTML5</span>
                                             </div>
-                        
-                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                
                                 <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
                                     <a href="https://kunga4green.me" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
                                     <a href="public/Campaign_Website.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank">View Project PDF &rarr;</a>
@@ -281,53 +324,47 @@
 
     <footer class="py-8">
         <div class="max-w-6xl mx-auto px-6 text-center text-gray-600">
-            <p>&copy; 2025 Ashmit Srivastava. Crafted with passion.</p>
+            <p>&copy; 2026 Ashmit Srivastava. Crafted with passion.</p>
         </div>
     </footer>
 
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Register GSAP plugins
             gsap.registerPlugin(ScrollTrigger);
 
             // --- MOUSE GLOW EFFECT ---
             const cursorGlow = document.getElementById('cursor-glow');
             const interactiveElements = document.querySelectorAll('a, button, .cta-button');
 
-            // Set initial position and state
-            gsap.set(cursorGlow, { xPercent: -50, yPercent: -50, scale: 0, opacity: 0 });
+            if (cursorGlow) {
+                gsap.set(cursorGlow, { xPercent: -50, yPercent: -50, scale: 0, opacity: 0 });
 
-            // Create highly optimized setter functions for x and y properties
-            const xTo = gsap.quickTo(cursorGlow, "x", { duration: 0.5, ease: "power3" });
-            const yTo = gsap.quickTo(cursorGlow, "y", { duration: 0.5, ease: "power3" });
+                const xTo = gsap.quickTo(cursorGlow, "x", { duration: 0.5, ease: "power3" });
+                const yTo = gsap.quickTo(cursorGlow, "y", { duration: 0.5, ease: "power3" });
 
-            // Animate glow to follow the cursor using the optimized functions
-            window.addEventListener('mousemove', e => {
-                xTo(e.clientX);
-                yTo(e.clientY);
-            });
-            
-            // Fade in the glow when mouse enters the window
-            document.body.addEventListener('mouseenter', () => {
-                gsap.to(cursorGlow, { duration: 0.3, scale: 1, opacity: 1 });
-            });
-
-            // Fade out the glow when mouse leaves the window
-            document.body.addEventListener('mouseleave', () => {
-                gsap.to(cursorGlow, { duration: 0.3, scale: 0, opacity: 0 });
-            });
-
-            // Add hover effect for interactive elements
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    gsap.to(cursorGlow, { duration: 0.3, scale: 1.5 });
+                window.addEventListener('mousemove', e => {
+                    xTo(e.clientX);
+                    yTo(e.clientY);
                 });
-                el.addEventListener('mouseleave', () => {
-                    gsap.to(cursorGlow, { duration: 0.3, scale: 1 });
+                
+                document.body.addEventListener('mouseenter', () => {
+                    gsap.to(cursorGlow, { duration: 0.3, scale: 1, opacity: 1 });
                 });
-            });
 
+                document.body.addEventListener('mouseleave', () => {
+                    gsap.to(cursorGlow, { duration: 0.3, scale: 0, opacity: 0 });
+                });
+
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        gsap.to(cursorGlow, { duration: 0.3, scale: 1.5 });
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        gsap.to(cursorGlow, { duration: 0.3, scale: 1 });
+                    });
+                });
+            }
 
             // --- HEADER HIDE/SHOW ON SCROLL ---
             const header = document.getElementById('main-header');
@@ -335,10 +372,8 @@
 
             window.addEventListener('scroll', () => {
                 if (lastScrollY < window.scrollY && window.scrollY > 100) {
-                    // Scrolling down
                     gsap.to(header, { y: '-100%', duration: 0.4, ease: 'power2.out' });
                 } else {
-                    // Scrolling up
                     gsap.to(header, { y: '0%', duration: 0.4, ease: 'power2.out' });
                 }
                 lastScrollY = window.scrollY;
@@ -390,9 +425,8 @@
             const projectsWrapper = document.getElementById('projects-wrapper');
             const projectsTitle = document.getElementById('projects-title');
 
-            // Use a function to calculate scroll distance to handle resizing
             const getScrollAmount = () => {
-                let projectsWrapperWidth = projectsWrapper.offsetWidth;
+                let projectsWrapperWidth = projectsWrapper.scrollWidth;
                 return -(projectsWrapperWidth - window.innerWidth);
             }
 
@@ -401,7 +435,6 @@
                 duration: 3,
                 ease: "none",
             });
-
 
             ScrollTrigger.create({
                 trigger:"#projects-pin-container",

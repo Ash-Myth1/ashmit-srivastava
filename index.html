@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Ashmit Srivastava - AI Engineer & Full-Stack Developer">
+    <meta property="og:description" content="Portfolio of Ashmit Srivastava, specializing in AI orchestration, predictive analytics, and full-stack web applications.">
+    <meta property="og:type" content="website">
+    
     <title>Ashmit Srivastava - Creative Developer Portfolio</title>
     
     <link rel="icon" type="image/png" href="public/AS_logo.png">
@@ -30,7 +35,7 @@
         }
 
         .hero-text {
-            color: #6e6e73;
+            color: #86868b; /* Lightened slightly for better a11y contrast */
         }
         .hero-text-highlight {
             color: #f5f5f7;
@@ -97,23 +102,73 @@
         </section>
 
         <section id="about" class="py-24 md:py-32 bg-[#111]">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="max-w-5xl mx-auto px-6">
+                
+                <!-- Bio & Image Grid -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
                     <div class="about-content">
                         <h2 class="text-4xl font-bold mb-6">A Bit About Me</h2>
-                        <p class="text-lg text-gray-400 mb-4">
-                            I am a B.Tech student specializing in Artificial Intelligence and Data Science at NIIT University. With a strong interest in emerging technologies, I am keen on exploring innovative solutions and applying data-driven approaches to solve real-world challenges.
+                        <p class="text-lg text-gray-400 mb-4 leading-relaxed">
+                            I am an AI Engineering and Data Science student at NIIT University, focused on bridging intelligent backend architecture with seamless user experiences. 
+                        </p>
+                        <p class="text-lg text-gray-400 mb-4 leading-relaxed">
+                            I specialize in building autonomous agentic systems, predictive analytics pipelines, and full-stack web applications. I am driven by making digital environments run more efficiently, whether that means structuring raw data into actionable insights or deploying locally hosted LLMs.
                         </p>
                     </div>
-                    <div class="about-image-wrapper p-8 bg-black rounded-3xl">
+                    <div class="about-image-wrapper p-8 bg-black rounded-3xl border border-gray-800 shadow-2xl">
                         <img 
                           src="public/Ashmit.jpg" 
                           alt="Ashmit Srivastava" 
-                          class="aspect-square w-full h-full object-cover rounded-2xl"
+                          class="aspect-square w-full h-full object-cover rounded-2xl filter grayscale hover:grayscale-0 transition-all duration-500"
                           onerror="this.onerror=null;this.src='https://placehold.co/400x400/111111/f5f5f7?text=Image+Not+Found';"
                         >
                     </div>
                 </div>
+
+                <!-- Certifications & Badges -->
+                <div class="badges-content">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-200">Certifications & Training</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        
+                        <!-- Badge 1: Oracle -->
+                        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=396B408E70BDE114FFC4A75FEB79DC851806575A6FAC19EF46D2B2CA084BB944" target="_blank" rel="noopener noreferrer" class="bg-black border border-gray-800 rounded-2xl p-6 flex flex-col items-start hover:border-gray-500 transition-colors block cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-red-900/30 flex items-center justify-center text-red-500 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            </div>
+                            <h4 class="text-sm font-semibold text-white mb-1">Agentic AI Foundations</h4>
+                            <p class="text-xs text-gray-500">Oracle</p>
+                        </a>
+
+                        <!-- Badge 2: Google Kaggle -->
+                        <a href="https://developers.google.com/profile/badges/events/cloud/five-day-ai-agents?u=112280355163769482563" target="_blank" rel="noopener noreferrer" class="bg-black border border-gray-800 rounded-2xl p-6 flex flex-col items-start hover:border-gray-500 transition-colors block cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-500 mb-4">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                            <h4 class="text-sm font-semibold text-white mb-1">5-Day AI Agents Intensive</h4>
+                            <p class="text-xs text-gray-500">Google x Kaggle</p>
+                        </a>
+
+                        <!-- Badge 3: Google Coursera -->
+                        <a href="https://www.coursera.org/account/accomplishments/verify/QEWEXSPQKC7K" target="_blank" rel="noopener noreferrer" class="bg-black border border-gray-800 rounded-2xl p-6 flex flex-col items-start hover:border-gray-500 transition-colors block cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-yellow-900/30 flex items-center justify-center text-yellow-500 mb-4">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                            </div>
+                            <h4 class="text-sm font-semibold text-white mb-1">Data, Data, Everywhere</h4>
+                            <p class="text-xs text-gray-500">Google x Coursera</p>
+                        </a>
+
+                        <!-- Badge 4: Tata -->
+                        <a href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_6a54e42586066ba056f8123d_1784025985467_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="bg-black border border-gray-800 rounded-2xl p-6 flex flex-col items-start hover:border-gray-500 transition-colors block cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center text-purple-500 mb-4">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            </div>
+                            <h4 class="text-sm font-semibold text-white mb-1">Data Visualisation</h4>
+                            <p class="text-xs text-gray-500">Tata Job Simulation</p>
+                        </a>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -158,8 +213,8 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="https://magginos-app.vercel.app" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
-                                    <a href="https://github.com/Ash-Myth1/magginos-app" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
+                                    <a href="https://your-magginos-link.com" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
+                                    <a href="https://github.com/Ash-Myth1/your-magginos-repo" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +249,7 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="https://github.com/Ash-Myth1/AIScholar" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
+                                    <a href="https://github.com/Ash-Myth1/your-aischolar-repo" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -389,7 +444,6 @@
                 lastScrollY = window.scrollY;
             });
 
-
             // --- HERO SECTION ANIMATION ---
             gsap.from(".hero-line", {
                 y: 100,
@@ -400,10 +454,10 @@
                 delay: 0.2
             });
 
-
             // --- ABOUT SECTION FADE-IN ---
             const aboutContent = document.querySelector('.about-content');
             const aboutImage = document.querySelector('.about-image-wrapper');
+            const badgesContent = document.querySelector('.badges-content');
 
             gsap.from(aboutContent.children, {
                 opacity: 0,
@@ -429,7 +483,20 @@
                     toggleActions: "play none none none"
                 }
             });
-
+            
+            // --- BADGES SECTION FADE-IN ---
+            gsap.from(badgesContent.children, {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: badgesContent,
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                }
+            });
 
             // --- PROJECTS HORIZONTAL SCROLL ANIMATION ---
             const projectsWrapper = document.getElementById('projects-wrapper');

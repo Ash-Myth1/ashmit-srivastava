@@ -35,7 +35,7 @@
         }
 
         .hero-text {
-            color: #86868b; /* Lightened slightly for better a11y contrast */
+            color: #86868b;
         }
         .hero-text-highlight {
             color: #f5f5f7;
@@ -172,198 +172,194 @@
             </div>
         </section>
 
-        <section id="projects" class="relative">
-            <div id="projects-pin-container" class="h-screen w-full">
-                <div class="max-w-6xl mx-auto px-6 h-full flex items-center">
+        <section id="projects" class="relative bg-[#000]">
+            <div id="projects-pin-container" class="w-full relative">
+                
+                <!-- Title Container -->
+                <div class="max-w-6xl mx-auto px-6 py-20 md:py-0 md:h-screen flex items-center md:absolute md:top-0 md:left-0 z-10 md:pointer-events-none">
                     <h2 id="projects-title" class="text-5xl font-bold">Selected Work</h2>
                 </div>
-                 <div id="projects-scroller" class="absolute top-0 left-0 w-full h-full overflow-x-scroll overflow-y-hidden horizontal-scroll-wrapper">
+                 
+                <!-- Wrapper: Column on mobile, Row on desktop -->
+                <div id="projects-wrapper" class="flex flex-col md:flex-row md:h-screen items-center md:w-max">
                     
-                    <div id="projects-wrapper" class="flex h-full items-center w-max">
-                        
-                        <div class="w-screen h-full flex-shrink-0"></div>
+                    <!-- Desktop Spacer (Hidden on mobile) -->
+                    <div class="hidden md:block w-screen h-full flex-shrink-0"></div>
 
-                        <!-- PROJECT 1: Magginos -->
-                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
-                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
-                                <div class="flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
-                                        <div class="w-12 h-12 rounded-lg bg-orange-900 flex items-center justify-center text-2xl">🛒</div>
-                                        <h3 class="text-3xl font-bold">Magginos</h3>
-                                    </div>
-                                    <div class="grid md:grid-cols-2 gap-x-8">
-                                        <div>
-                                            <p class="text-gray-400 text-sm">A full-stack Progressive Web App (PWA) facilitating campus food logistics. Architected to modern standards utilizing a robust automated CI/CD deployment pipeline via Vercel.</p>
-                                            <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Integrated predictive Machine Learning models for inventory forecasting and NLP-based sentiment analysis, directly optimizing day-to-day operational efficiency.</p>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
-                                            <ul class="space-y-2 text-sm text-gray-400">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📈</span><span>Predictive inventory ML analytics.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">💬</span><span>NLP-driven sentiment analysis.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🚀</span><span>Automated Vercel CI/CD pipeline.</span></li>
-                                            </ul>
-                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
-                                            <div class="flex flex-wrap gap-2">
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">React & TypeScript</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Firebase</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">NLP & Predictive ML</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <!-- PROJECT 1: Magginos -->
+                    <div class="project-panel w-full md:w-screen md:h-full flex-shrink-0 flex items-center justify-center p-6 md:p-16 mb-12 md:mb-0">
+                        <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                            <div class="flex-grow">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-12 h-12 rounded-lg bg-orange-900 flex items-center justify-center text-2xl">🛒</div>
+                                    <h3 class="text-3xl font-bold">Magginos</h3>
                                 </div>
-                                <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="https://your-magginos-link.com" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
-                                    <a href="https://github.com/Ash-Myth1/your-magginos-repo" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
+                                <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+                                    <div>
+                                        <p class="text-gray-400 text-sm">A full-stack Progressive Web App (PWA) facilitating campus food logistics. Architected to modern standards utilizing a robust automated CI/CD deployment pipeline via Vercel.</p>
+                                        <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Integrated predictive Machine Learning models for inventory forecasting and NLP-based sentiment analysis, directly optimizing day-to-day operational efficiency.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                        <ul class="space-y-2 text-sm text-gray-400">
+                                            <li class="flex items-start"><span class="mr-2 text-lg">📈</span><span>Predictive inventory ML analytics.</span></li>
+                                            <li class="flex items-start"><span class="mr-2 text-lg">💬</span><span>NLP-driven sentiment analysis.</span></li>
+                                            <li class="flex items-start"><span class="mr-2 text-lg">🚀</span><span>Automated Vercel CI/CD pipeline.</span></li>
+                                        </ul>
+                                        <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">React & TypeScript</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Firebase</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">NLP & ML</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- PROJECT 2: AIScholar -->
-                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
-                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
-                                <div class="flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
-                                        <div class="w-12 h-12 rounded-lg bg-blue-900 flex items-center justify-center text-2xl">🤖</div>
-                                        <h3 class="text-3xl font-bold">AIScholar</h3>
-                                    </div>
-                                    <div class="grid md:grid-cols-2 gap-x-8">
-                                        <div>
-                                            <p class="text-gray-400 text-sm">A hands-on implementation of agentic AI principles. Engineered as an offline, privacy-first Retrieval-Augmented Generation (RAG) research assistant deployed entirely on local hardware.</p>
-                                            <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Built strictly to production-grade practices, featuring robust history-aware data retrieval and metadata-anchored citations to guarantee verifiable, hallucination-resistant LLM interactions.</p>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
-                                            <ul class="space-y-2 text-sm text-gray-400">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🔒</span><span>Privacy-first, local execution.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🧠</span><span>Agentic, history-aware retrieval.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📑</span><span>Metadata-anchored validation.</span></li>
-                                            </ul>
-                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
-                                            <div class="flex flex-wrap gap-2">
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">LLM Orchestration</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">RAG Architecture</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Local AI</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="https://github.com/Ash-Myth1/your-aischolar-repo" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
-                                </div>
+                            <div class="flex flex-wrap gap-6 mt-6 pt-4 border-t border-gray-800/50">
+                                <a href="https://your-magginos-link.com" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
+                                <a href="https://github.com/Ash-Myth1/your-magginos-repo" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
                             </div>
                         </div>
-
-                        <!-- PROJECT 3: EduData -->
-                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
-                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
-                                <div class="flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
-                                        <img src="public/edu_data_logo.png" alt="EduData Logo" class="w-12 h-12 rounded-lg flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/64x64/111111/f5f5f7?text=Logo';">
-                                        <h3 class="text-3xl font-bold">EduData</h3>
-                                    </div>
-                                    <div class="grid md:grid-cols-2 gap-x-8">
-                                        <div>
-                                            <p class="text-gray-400 text-sm">A comprehensive Student Management System designed to streamline storing, updating, and retrieving student records. Built with Python, it provides an intuitive GUI to manage student data efficiently.</p>
-                                            <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Provides an organized, reliable, and secure solution for student data management, demonstrating practical application of database systems, GUI design, and Python programming.</p>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
-                                            <ul class="space-y-2 text-sm text-gray-400">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🗄️</span><span>Full CRUD functionality.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📊</span><span>Export data to CSV/Excel.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🎨</span><span>User-friendly interface built with Tkinter.</span></li>
-                                            </ul>
-                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
-                                            <div class="flex flex-wrap gap-2">
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Tkinter</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">MySQL</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="public/Edu_Data.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank" download>View Project PDF &rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PROJECT 4: Kunga4Green -->
-                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
-                            <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
-                                <div class="flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
-                                        <div class="w-12 h-12 rounded-lg bg-green-900 flex items-center justify-center text-2xl">🏆</div>
-                                        <h3 class="text-3xl font-bold text-white">Kunga4Green</h3>
-                                    </div>
-                                    <div class="grid md:grid-cols-2 gap-x-8">
-                                        <div class="flex flex-col gap-4">
-                                            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-800 w-full">
-                                                <video autoplay loop muted playsinline controls poster="public/campaign_site.png" class="w-full aspect-video object-cover">
-                                                    <source src="public/campaign_demo.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                            </div>
-                                            <p class="text-gray-400 text-sm">
-                                                A digital election HQ designed to consolidate a political manifesto into a bold, interactive experience, utilizing a modern, responsive design language.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
-                                            <ul class="space-y-2 text-sm text-gray-400">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">⚡</span><span>Fluid GSAP scroll-reveal animations.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📈</span><span>Directly contributed to an election victory.</span></li>
-                                            </ul>
-                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
-                                            <div class="flex flex-wrap gap-2">
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Tailwind CSS</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">GSAP</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="https://kunga4green.me" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
-                                    <a href="public/Campaign_Website.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank">View Project PDF &rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PROJECT 5: Shahar -->
-                        <div class="project-panel w-screen h-full flex-shrink-0 flex items-center justify-center p-8 md:p-16">
-                           <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
-                                <div class="flex-grow">
-                                    <div class="flex items-center gap-4 mb-6">
-                                        <img src="public/shahar_logo.png" alt="Shahar Logo" class="w-12 h-12 rounded-lg flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/64x64/111111/f5f5f7?text=Logo';">
-                                        <h3 class="text-3xl font-bold">Shahar</h3>
-                                    </div>
-                                    <div class="grid md:grid-cols-2 gap-x-8">
-                                        <div>
-                                            <p class="text-gray-400 text-sm">An interactive Jaisalmer travel guide using Google Maps and Apps Script. It serves as a one-stop digital companion for tourists, making travel planning simple and engaging.</p>
-                                            <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Showcased skills in data visualization, API integration, and creating user-friendly web experiences.</p>
-                                        </div>
-                                        <div>
-                                            <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
-                                            <ul class="space-y-2 text-sm text-gray-400">
-                                                <li class="flex items-start"><span class="mr-2 text-lg">📍</span><span>Google Maps integration.</span></li>
-                                                <li class="flex items-start"><span class="mr-2 text-lg">🏰</span><span>Heritage site details.</span></li>
-                                            </ul>
-                                            <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
-                                            <div class="flex flex-wrap gap-2">
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Google Maps API</span>
-                                                <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Apps Script</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
-                                    <a href="public/Shahar.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank" download>View Project PDF &rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <!-- PROJECT 2: AIScholar -->
+                    <div class="project-panel w-full md:w-screen md:h-full flex-shrink-0 flex items-center justify-center p-6 md:p-16 mb-12 md:mb-0">
+                        <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                            <div class="flex-grow">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-12 h-12 rounded-lg bg-blue-900 flex items-center justify-center text-2xl">🤖</div>
+                                    <h3 class="text-3xl font-bold">AIScholar</h3>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+                                    <div>
+                                        <p class="text-gray-400 text-sm">A hands-on implementation of agentic AI principles. Engineered as an offline, privacy-first Retrieval-Augmented Generation (RAG) research assistant deployed entirely on local hardware.</p>
+                                        <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Built strictly to production-grade practices, featuring robust history-aware data retrieval and metadata-anchored citations to guarantee verifiable, hallucination-resistant LLM interactions.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                        <ul class="space-y-2 text-sm text-gray-400">
+                                            <li class="flex items-start"><span class="mr-2 text-lg">🔒</span><span>Privacy-first, local execution.</span></li>
+                                            <li class="flex items-start"><span class="mr-2 text-lg">🧠</span><span>Agentic, history-aware retrieval.</span></li>
+                                            <li class="flex items-start"><span class="mr-2 text-lg">📑</span><span>Metadata-anchored validation.</span></li>
+                                        </ul>
+                                        <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">LLM Orchestration</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">RAG Architecture</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Local AI</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
+                                <a href="https://github.com/Ash-Myth1/your-aischolar-repo" class="text-gray-400 font-semibold hover:text-white transition-colors" target="_blank">View Source on GitHub &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: EduData -->
+                    <div class="project-panel w-full md:w-screen md:h-full flex-shrink-0 flex items-center justify-center p-6 md:p-16 mb-12 md:mb-0">
+                        <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                            <div class="flex-grow">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img src="public/edu_data_logo.png" alt="EduData Logo" class="w-12 h-12 rounded-lg flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/64x64/111111/f5f5f7?text=Logo';">
+                                    <h3 class="text-3xl font-bold">EduData</h3>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+                                    <div>
+                                        <p class="text-gray-400 text-sm">A comprehensive Student Management System designed to streamline storing, updating, and retrieving student records. Built with Python, it provides an intuitive GUI to manage student data efficiently.</p>
+                                        <p class="text-gray-400 text-sm mt-4"><b>Impact:</b> Provides an organized, reliable, and secure solution for student data management.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                        <ul class="space-y-2 text-sm text-gray-400">
+                                            <li class="flex items-start"><span class="mr-2 text-lg">🗄️</span><span>Full CRUD functionality.</span></li>
+                                            <li class="flex items-start"><span class="mr-2 text-lg">📊</span><span>Export data to CSV/Excel.</span></li>
+                                        </ul>
+                                        <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Tkinter</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">MySQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
+                                <a href="public/Edu_Data.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank" download>View Project PDF &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4: Kunga4Green -->
+                    <div class="project-panel w-full md:w-screen md:h-full flex-shrink-0 flex items-center justify-center p-6 md:p-16 mb-12 md:mb-0">
+                        <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                            <div class="flex-grow">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-12 h-12 rounded-lg bg-green-900 flex items-center justify-center text-2xl">🏆</div>
+                                    <h3 class="text-3xl font-bold text-white">Kunga4Green</h3>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+                                    <div class="flex flex-col gap-4">
+                                        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-800 w-full">
+                                            <video autoplay loop muted playsinline controls poster="public/campaign_site.png" class="w-full aspect-video object-cover">
+                                                <source src="public/campaign_demo.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                        <p class="text-gray-400 text-sm">A digital election HQ designed to consolidate a political manifesto into a bold, interactive experience.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                        <ul class="space-y-2 text-sm text-gray-400">
+                                            <li class="flex items-start"><span class="mr-2 text-lg">⚡</span><span>Fluid GSAP animations.</span></li>
+                                            <li class="flex items-start"><span class="mr-2 text-lg">📈</span><span>Contributed to election victory.</span></li>
+                                        </ul>
+                                        <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Tailwind CSS</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">GSAP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
+                                <a href="https://kunga4green.me" class="text-green-500 font-semibold hover:text-green-400 transition-colors" target="_blank">View Live Site &rarr;</a>
+                                <a href="public/Campaign_Website.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank">View Project PDF &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5: Shahar -->
+                    <div class="project-panel w-full md:w-screen md:h-full flex-shrink-0 flex items-center justify-center p-6 md:p-16 mb-12 md:mb-0">
+                       <div class="w-full max-w-3xl bg-[#111] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+                            <div class="flex-grow">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img src="public/shahar_logo.png" alt="Shahar Logo" class="w-12 h-12 rounded-lg flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/64x64/111111/f5f5f7?text=Logo';">
+                                    <h3 class="text-3xl font-bold">Shahar</h3>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+                                    <div>
+                                        <p class="text-gray-400 text-sm">An interactive Jaisalmer travel guide using Google Maps and Apps Script. It serves as a one-stop digital companion for tourists.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-200 mb-2">Key Features</h4>
+                                        <ul class="space-y-2 text-sm text-gray-400">
+                                            <li class="flex items-start"><span class="mr-2 text-lg">📍</span><span>Google Maps integration.</span></li>
+                                        </ul>
+                                        <h4 class="font-semibold text-gray-200 mt-4 mb-2">Tech Used</h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Google Maps API</span>
+                                            <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">Apps Script</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 mt-6 pt-4 border-t border-gray-800/50">
+                                <a href="public/Shahar.pdf" class="text-blue-500 font-semibold hover:text-blue-400 transition-colors" target="_blank" download>View Project PDF &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -392,7 +388,6 @@
             <p>&copy; 2026 Ashmit Srivastava. Crafted with passion.</p>
         </div>
     </footer>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -498,60 +493,88 @@
                 }
             });
 
-            // --- PROJECTS HORIZONTAL SCROLL ANIMATION ---
+            // --- PROJECTS RESPONSIVE SCROLL ANIMATION ---
             const projectsWrapper = document.getElementById('projects-wrapper');
             const projectsTitle = document.getElementById('projects-title');
-
-            const getScrollAmount = () => {
-                let projectsWrapperWidth = projectsWrapper.scrollWidth;
-                return -(projectsWrapperWidth - window.innerWidth);
-            }
-
-            const tween = gsap.to(projectsWrapper, {
-                x: getScrollAmount,
-                duration: 3,
-                ease: "none",
-            });
-
-            ScrollTrigger.create({
-                trigger:"#projects-pin-container",
-                start:"top top",
-                end: () => `+=${getScrollAmount() * -1}`,
-                pin:true,
-                animation:tween,
-                scrub:1.5,
-                invalidateOnRefresh:true,
-            });
+            const projectPanels = document.querySelectorAll('.project-panel');
             
-            gsap.to(projectsTitle, {
-                opacity: 0,
-                y: -50,
-                scrollTrigger: {
+            let mm = gsap.matchMedia();
+
+            // DESKTOP ONLY: Horizontal Pinning
+            mm.add("(min-width: 768px)", () => {
+                
+                const getScrollAmount = () => {
+                    let projectsWrapperWidth = projectsWrapper.scrollWidth;
+                    return -(projectsWrapperWidth - window.innerWidth);
+                }
+
+                const tween = gsap.to(projectsWrapper, {
+                    x: getScrollAmount,
+                    duration: 3,
+                    ease: "none",
+                });
+
+                ScrollTrigger.create({
                     trigger: "#projects-pin-container",
                     start: "top top",
-                    end: "+=200",
-                    scrub: 1
-                }
-            });
-
-            const projectPanels = document.querySelectorAll('.project-panel');
-            projectPanels.forEach((panel) => {
-                gsap.from(panel.children[0], {
+                    end: () => `+=${getScrollAmount() * -1}`,
+                    pin: true,
+                    animation: tween,
+                    scrub: 1.5,
+                    invalidateOnRefresh: true,
+                });
+                
+                gsap.to(projectsTitle, {
                     opacity: 0,
-                    y: 100,
-                    scale: 0.95,
-                    duration: 1.2,
-                    ease: 'power3.out',
+                    y: -50,
                     scrollTrigger: {
-                        trigger: panel,
-                        start: "left 80%",
-                        end: "left 50%",
-                        scrub: 1.5,
-                        containerAnimation: tween,
+                        trigger: "#projects-pin-container",
+                        start: "top top",
+                        end: "+=200",
+                        scrub: 1
                     }
+                });
+
+                projectPanels.forEach((panel) => {
+                    gsap.from(panel.children[0], {
+                        opacity: 0,
+                        y: 100,
+                        scale: 0.95,
+                        duration: 1.2,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: panel,
+                            start: "left 80%",
+                            end: "left 50%",
+                            scrub: 1.5,
+                            containerAnimation: tween,
+                        }
+                    });
                 });
             });
 
+            // MOBILE ONLY: Vertical Fade-ins
+            mm.add("(max-width: 767px)", () => {
+                
+                gsap.to(projectsTitle, {
+                    opacity: 1,
+                    y: 0,
+                });
+
+                projectPanels.forEach((panel) => {
+                    gsap.from(panel.children[0], {
+                        opacity: 0,
+                        y: 50,
+                        duration: 1,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: panel,
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    });
+                });
+            });
 
             // --- CONTACT SECTION FADE-IN ---
             gsap.from("#contact > *", {
